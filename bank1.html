@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM 현금인출기</title>
+  </head>
+  <body>
+    <script>
+      
+      document.writeln(`1. 예금  2. 출금  3. 잔액 확인  4. 종료<br>`);
+        
+      let button = Number(prompt('어떤 업무를 선택하시겠습니까?'));
+      let balance = 0;
+
+
+      switch (button) {
+        case 1:
+          balance;
+          document.writeln("입금 선택하셨습니다.<br>");
+          let input = Number(prompt("입금액은?"));
+          document.writeln(`현재 잔액은 ${balance}원 입니다.<br>`);
+          balance = balance + input;
+          document.writeln(`입금 후 잔액은 ${balance}원 입니다.<br>`);
+          break;
+
+        case 2:
+          document.writeln("출금 선택하셨습니다.<br>");
+          let output = Number(prompt("출금액은?"));
+          document.writeln(`현재 잔액은 ${balance}원 입니다.<br>`);
+          balance = balance - output;
+          document.writeln(`출금 후 잔액은 ${balance}원 입니다.<br>`);
+          break;
+
+        case 3:
+          balance > -1? document.writeln(`현재 잔액은 ${balance}원 입니다.`) : document.writeln("잔액이 없습니다.");
+          break;
+
+        default:
+          document.writeln("이용해 주셔서 감사합니다.");
+      }
+    </script>
+  </body>
+</html>
